@@ -1,0 +1,71 @@
+
+.prodotti{
+    position: relative;
+	display: table;
+	border-spacing: 10px;
+	top:-100px;
+}
+
+
+
+table {
+	width: 1000px;
+}
+
+table, th, td {
+	border: none;
+	text-align: left;
+	
+}
+
+th, td {
+	width: 500px;
+	padding: 30px;
+}
+
+label {
+	font-weight: bold;
+}
+
+
+textarea {
+	width: 500px;
+	height: 60px;
+	font-size: 1em;
+}
+
+
+
+.scacchi a{
+	 font-size:20px;
+}
+
+.tableRow {
+	display: table-row;
+}
+
+.carrello{
+ display: table-cell;
+    background-color: #efe5d0;
+    width: 20%;
+    padding: 15px;
+    vertical-align: top;
+    border: 2px solid white;
+    border-radius:20px;
+}
+
+.scacchi{
+	display: table-cell;
+  background:       #267365 top left;
+  font-size:        105%;
+  padding:          15px;
+  vertical-align: top;
+}
+
+
+
+
+
+
+
+

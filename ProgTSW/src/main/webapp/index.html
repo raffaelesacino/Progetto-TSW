@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>menù</title>
+<link rel="stylesheet" type="text/css" href="menu.css"  />
+</head>
+<body>
+<header>
+<div class="menu">
+<img id="logo" src="immagini/LOGO.png">
+ <ul id="links">
+  <li><a href="home">Home</a></li>
+  <li><a href="scacchiere">Scacchiere</a></li>
+  <li><a href="scacchi">Scacchi</a></li>
+  <li><a href="contatti">Contatti</a></li>
+ </ul>
+ <button class="accedi">Accedi</button>
+ <button class="registrati">Registrati</button>
+</div>
+</header>
+
+<div class=accesso>
+	<form id="accForm" action="accesso" onsubmit="return validate()">
+		<fieldset>
+			<legend>Accedi!</legend>
+			<div>
+				<label for="firstname">Nome:</label><input type="text"
+					name="firstname" id="firstname"><span id="errorName"></span>
+			</div>
+			<div>
+				<label for="lastname">Cognome:</label><input type="text"
+					name="lastname" id="lastname"><span id="errorLastname"></span>
+			</div>
+			<div>
+				<label for="email">Email:</label><input type="text" name="email"
+					id="email"><span id="errorEmail"></span>
+			</div>
+			<hr>
+			<div>
+				<label for="password">Password:</label><input type="password" name="email"
+					id="password"><span id="erropassword"></span>
+			</div>
+			<div>
+				<input type="submit" value="Registrati"> <input type="reset"
+					value="Reset">
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+   <div class=registrazione>
+	<form id="regForm" action="registrazione" onsubmit="return validate()">
+		<fieldset>
+			<legend>Registrati!</legend>
+			<div>
+				<label for="firstname">Nome:</label><input type="text"
+					name="firstname" id="firstname"><span id="errorName"></span>
+			</div>
+			<div>
+				<label for="lastname">Cognome:</label><input type="text"
+					name="lastname" id="lastname"><span id="errorLastname"></span>
+			</div>
+			<div>
+				<label for="email">Email:</label><input type="text" name="email"
+					id="email"><span id="errorEmail"></span>
+			</div>
+			<hr>
+			<div>
+				<input type="submit" value="Registrati"> <input type="reset"
+					value="Reset">
+			</div>
+		</fieldset>
+	</form>
+</div>
+
+
+<script src="reg.js"></script>
+</body>
+</html>
