@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>menu</title>
-<link rel="stylesheet" type="text/css" href="menu.css"  />
+<link rel="stylesheet" type="text/css" href="css/menu.css"  />
 </head>
 <body>
 <header>
@@ -17,11 +17,15 @@
 <img id="logo" src="immagini/LOGO.png">
 
  <ul class="links">
-  <li><a href="home">Home</a></li>
-  <li><a href="http://localhost/ProgTSW/product">Scacchiere</a></li>
-  <li><a href="scacchi">Scacchi</a></li>
-  <li><a href="contatti">Contatti</a></li>
+  <li><a href="http://localhost/ProgTSW/home.jsp">Home</a></li>
+  <li><a href="http://localhost/ProgTSW/product">Catalogo</a></li>
+  <li><a href="http://localhost/ProgTSW/chi_siamo.jsp">Chi siamo</a></li>
+
  </ul>
+ 
+ <div class="tendina">
+ 
+ </div>
  <%
  if(session.getAttribute("user") == null){ %>
  <button class="accedi">Accedi</button>

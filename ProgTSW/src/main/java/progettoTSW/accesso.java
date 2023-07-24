@@ -56,7 +56,7 @@ public class accesso extends HttpServlet {
 			    HttpSession currentSession =request.getSession();
 			    currentSession.setAttribute("user", e);
 			    currentSession.setMaxInactiveInterval(5*60);
-			    response.sendRedirect("index.jsp");}
+			    response.sendRedirect("home.jsp");}
 			else {
 		
 			HttpSession oldSession=request.getSession(false);
@@ -66,10 +66,10 @@ public class accesso extends HttpServlet {
 		    HttpSession currentSession =request.getSession();
 		    currentSession.setAttribute("user", e);
 		    currentSession.setMaxInactiveInterval(5*60);
-		    response.sendRedirect("index.jsp");}
+		    response.sendRedirect("home.jsp");}
 	
 		else {
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("home.jsp");
 		}}
 	
 	catch(ClassNotFoundException e){

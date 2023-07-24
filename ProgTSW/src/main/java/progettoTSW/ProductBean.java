@@ -1,6 +1,10 @@
 package progettoTSW;
 
+
 import java.io.Serializable;
+
+
+
 
 public class ProductBean implements Serializable {
 
@@ -11,9 +15,11 @@ public class ProductBean implements Serializable {
 	String description;
 	int price;
 	int quantity;
+	String immagine;
 
 	public ProductBean() {
 		code = -1;
+		immagine= "";
 		name = "";
 		description = "";
 		quantity = 0;
@@ -59,9 +65,21 @@ public class ProductBean implements Serializable {
 		this.quantity = quantity;
 	}
 
+	public String getimmagine() {
+		return immagine;
+	}
+
+	public void setimmagine(String immagini) {
+		this.immagine = immagini;
+	}
+	
+	public void clear() {
+		this.clear();
+	}
+	
 	@Override
 	public String toString() {
-		return name + " (" + code + "), " + price + " " + quantity + ". " + description;
+		return name + " (" + code + "), " + immagine + " " + price + " " + quantity + ". " + description;
 	}
 
 }

@@ -43,6 +43,7 @@ public class ProductControl extends HttpServlet {
 		}
 		
 		String action = request.getParameter("action");
+		
 
 		try {
 			if (action != null) {
@@ -61,12 +62,14 @@ public class ProductControl extends HttpServlet {
 					productDao.doDelete(id);
 				} else if (action.equalsIgnoreCase("insert")) {
 					String name = request.getParameter("name");
+					String immagine = request.getParameter("immagine");
 					String description = request.getParameter("description");
 					int price = Integer.parseInt(request.getParameter("price"));
 					int quantity = Integer.parseInt(request.getParameter("quantity"));
 
 					ProductBean bean = new ProductBean();
 					bean.setName(name);
+					bean.setimmagine(immagine);
 					bean.setDescription(description);
 					bean.setPrice(price);
 					bean.setQuantity(quantity);
@@ -90,7 +93,7 @@ public class ProductControl extends HttpServlet {
 			System.out.println("Error:" + e.getMessage());
 		}
 
-		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ProductView.jsp");
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/catalogo.jsp");
 		dispatcher.forward(request, response);
 	}
 

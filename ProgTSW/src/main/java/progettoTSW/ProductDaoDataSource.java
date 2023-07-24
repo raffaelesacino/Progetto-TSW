@@ -21,7 +21,7 @@ public class ProductDaoDataSource implements IBeanDao<ProductBean> {
 			Context initCtx = new InitialContext();
 			Context envCtx = (Context) initCtx.lookup("java:comp/env");
 
-			ds = (DataSource) envCtx.lookup("jdbc/storage");
+			ds = (DataSource) envCtx.lookup("jdbc/scacchi");
 
 		} catch (NamingException e) {
 			System.out.println("Error:" + e.getMessage());
@@ -37,15 +37,16 @@ public class ProductDaoDataSource implements IBeanDao<ProductBean> {
 		PreparedStatement preparedStatement = null;
 
 		String insertSQL = "INSERT INTO " + ProductDaoDataSource.TABLE_NAME
-				+ " (NAME, DESCRIPTION, PRICE, QUANTITY) VALUES (?, ?, ?, ?)";
+				+ " (NAME, IMG, DESCRIPTION, PRICE, QUANTITY) VALUES (?, ?, ?, ?, ?)";
 
 		try {
 			connection = ds.getConnection();
 			preparedStatement = connection.prepareStatement(insertSQL);
 			preparedStatement.setString(1, product.getName());
-			preparedStatement.setString(2, product.getDescription());
-			preparedStatement.setInt(3, product.getPrice());
-			preparedStatement.setInt(4, product.getQuantity());
+			preparedStatement.setString(2, product.getimmagine());
+			preparedStatement.setString(3, product.getDescription());
+			preparedStatement.setInt(4, product.getPrice());
+			preparedStatement.setInt(5, product.getQuantity());
 
 			preparedStatement.executeUpdate();
 
@@ -80,6 +81,7 @@ public class ProductDaoDataSource implements IBeanDao<ProductBean> {
 			while (rs.next()) {
 				bean.setCode(rs.getInt("CODE"));
 				bean.setName(rs.getString("NAME"));
+				bean.setimmagine(rs.getString("IMG"));
 				bean.setDescription(rs.getString("DESCRIPTION"));
 				bean.setPrice(rs.getInt("PRICE"));
 				bean.setQuantity(rs.getInt("QUANTITY"));
@@ -149,6 +151,7 @@ public class ProductDaoDataSource implements IBeanDao<ProductBean> {
 
 				bean.setCode(rs.getInt("CODE"));
 				bean.setName(rs.getString("NAME"));
+				bean.setimmagine(rs.getString("IMG"));
 				bean.setDescription(rs.getString("DESCRIPTION"));
 				bean.setPrice(rs.getInt("PRICE"));
 				bean.setQuantity(rs.getInt("QUANTITY"));

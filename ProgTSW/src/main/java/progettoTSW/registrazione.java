@@ -72,7 +72,7 @@ public class registrazione extends HttpServlet {
 			    HttpSession currentSession =request.getSession();
 			    currentSession.setAttribute(username, e);
 			    currentSession.setMaxInactiveInterval(5*60);
-			    response.sendRedirect("loggato.jsp");
+			    response.sendRedirect("home.jsp");
 			    ps.executeUpdate();
 				con.commit();
 				

@@ -1,0 +1,280 @@
+
+body{
+		position:absolute;
+	z-index:1;
+	height:100vh;
+	background-color: #267365;
+	background-size:cover;
+	background-position:center;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #F2CB05;
+	font-size: 25px;
+}
+
+a:hover{
+	color:#F29F05;
+}
+
+header{
+	position: relative;
+	padding: 0 2rem;
+	margin:auto;
+	top:35px;
+}
+
+.menu{
+	float:left;
+	width: 100%;
+	height:60px;
+	max-width:1200px;
+	margin:0 auto;
+	display: flex;
+	align-items:center;
+	justify-content: space-between;
+}
+
+img#logo{
+	
+ width: 74px; 
+ height: auto; 
+	}
+
+ul.links { margin: 0px; padding: 0px; list-style-type: none; width: 100%; text-align: center; }
+
+.links li { display: inline; padding: 70px; }
+
+.menu .logout{
+	position: relative;
+	left:30px;
+	margin-left:0px;
+	background:#F29F05;
+	width: 130px;
+	height:50px;
+	border: 2px solid white;
+	outline:none;
+	border-radius:20px;
+	cursor:pointer;
+	font-size: 20px;
+	color:white;
+	
+}
+
+.logout:hover{
+	color:#F23030;
+}
+
+.menu .accedi{
+	position: relative;
+	left:50px;
+	margin-left:0px;
+	background:#F29F05;
+	width: 130px;
+	height:50px;
+	border: 2px solid white;
+	outline:none;
+	border-radius:20px;
+	cursor:pointer;
+	font-size: 20px;
+	color:white;
+	
+}
+
+.accesso .X_accesso{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 35px;
+	height:35px;
+	background: #F2CB05;
+	border:none;
+	font-size:15px;
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-bottom-left-radius:20px;
+	cursor:pointer;
+	z-index:1;
+	
+}
+
+.registrazione .X_registrazione{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 35px;
+	height:35px;
+	background: #F2CB05;
+	border:none;
+	font-size:15px;
+	color:white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	border-bottom-left-radius:20px;
+	cursor:pointer;
+	z-index:1;
+	
+}
+
+.accedi:hover{
+	color:#F23030;
+}
+
+.menu .registrati{
+	position: relative;
+	left:125px;
+	background:#F29F05;
+	width: 130px;
+	height:50px;
+	border: 2px solid white;
+	outline:none;
+	border-radius:20px;
+	cursor:pointer;
+	font-size: 20px;
+	color:white;
+	
+}
+.footer{
+	position: relative;
+	top:500px;
+	color:white
+}
+.chi_siamo{
+	text-align:justify;
+	background-color:#267365;
+	color:white;
+}
+.registrati:hover{
+	color:#F23030;
+}
+
+.registrazione{
+position:relative;
+	top:160px;
+	left:500px;
+	width:550px;
+	height:150px;
+	border-radius:20px;
+	background: #F23030;
+	border:5px solid white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform:scale(0);
+	transition:transform .5s ease;
+	overflow:hidden;
+}
+
+.registrazione.active-popup-registrazione{
+	transform:scale(1) translateY(-260px);
+}
+
+.accesso{
+	position:relative;
+	top:70px;
+	left:500px;
+	width:500px;
+	height:150px;
+	border-radius:20px;
+	background: #F23030;
+	border:5px solid white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	transform:scale(0);
+	transition:transform .5s ease;
+	overflow:hidden;
+}
+
+.accesso.active-popup-accesso{
+	
+	transform:scale(1);
+}
+
+.scritta{
+	position:relative;
+	top:-40px;
+	left:70px;
+	text-align:center;
+	color:WHITE;
+	font-family: Helvetica, Arial, sans-serif;
+	}
+
+
+
+
+@media(max-width: 1024px){
+	.scritta{
+	position:relative;
+	top:-40px;
+	left:30px;
+	text-align:center;
+	}
+	
+}
+
+@media(max-width: 744px){
+	.scritta{
+	position:relative;
+	top:-40px;
+	left:30px;
+	text-align:left;
+	font-size:15px;
+	}
+
+img#logo{
+display:none;
+	}
+
+.menu .accedi{
+	position: relative;
+	left:5px;}
+
+
+
+.menu .registrati{
+	position: relative;
+	left:20px;}
+	
+.accesso{
+	position:relative;
+	top:100px;
+	left:10px;
+	width:250px;
+	height:200px;
+}
+.registrazione{
+position:relative;
+	top:150px;
+	left:10px;
+	width:300px;
+	height:200px;
+}
+ .menu .links li{
+padding:10px;
+	 }
+
+}
+
+
+@media(max-width: 621px){
+	.scritta{
+	position:relative;
+	top:-40px;
+	left:30px;
+	text-align:left;
+	font-size:10px;
+	}
+
+}
+
+
+
